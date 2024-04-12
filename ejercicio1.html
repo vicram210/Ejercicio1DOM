@@ -10,7 +10,7 @@ window.onload = function() {
     const enlaces = document.getElementsByTagName('a'); //Busca las etiquetas <a> de todo el codigo y dice la cantidad
     console.log("Número de enlaces de la página:", enlaces.length);
 
-    
+
     // Dirección a la que enlaza el penúltimo enlace
     if (enlaces.length >= 2) {
         const penultimoEnlace = enlaces[enlaces.length - 2]; //Le resta al contador -2
@@ -37,8 +37,7 @@ window.onload = function() {
 
 
     // Número de enlaces del tercer párrafo
-    const tercerParrafo = document.getElementsByTagName('p')[2]; //Busca las etiquetas <p>
-											                     //Los índices de las listas comienzan desde 0, por lo que [2] seleccionará el tercer elemento.
+    const tercerParrafo = document.getElementsByTagName('p')[2]; //Busca las etiquetas <p> y los índices de las listas comienzan desde 0, por lo que [2] seleccionará el tercer elemento.
 																	
     const enlacesTercerParrafo = tercerParrafo.getElementsByTagName('a'); //Busca las etiquetas <a>
     console.log("Número de enlaces del tercer párrafo:", enlacesTercerParrafo.length);
