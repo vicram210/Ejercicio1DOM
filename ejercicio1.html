@@ -20,15 +20,24 @@ window.onload = function() {
     }
 
     // Numero de enlaces que enlazan a http://prueba
-    const enlacesAHttpPrueba = document.querySelectorAll('a[href="http://prueba/"]'); //Obtiene un numero que es la cantidad apariciones de ese enlace
-    console.log("Número de enlaces que enlazan a http://prueba:", enlacesAHttpPrueba.length);
+    const enlaceBuscado = 'http://prueba/'; // URL del enlace que quieres buscar
+    const enlaces2 = document.getElementsByTagName('a'); // Obtener todos los elementos <a> en la página
+
+    let contador = 0;
+
+    // Iterar sobre cada enlace para verificar si su atributo href contiene la URL buscada
+    for (let i = 0; i < enlaces2.length; i++) {
+        if (enlaces2[i].getAttribute('href').includes(enlaceBuscado)) {
+            contador++;
+        }
+    }
+    console.log("Número de enlaces que contienen '" + enlaceBuscado + "':", contador); // Imprimir el número de enlaces encontrados
+
 
     // Número de enlaces del tercer párrafo
     const tercerParrafo = document.getElementsByTagName('p')[2]; //Busca las etiquetas <p>
-																	/*
-											Los índices de las listas comienzan desde 0, por lo que [2] 
-											seleccionará el tercer elemento.
-																	*/
+											                     //Los índices de las listas comienzan desde 0, por lo que [2] seleccionará el tercer elemento.
+																	
     const enlacesTercerParrafo = tercerParrafo.getElementsByTagName('a'); //Busca las etiquetas <a>
     console.log("Número de enlaces del tercer párrafo:", enlacesTercerParrafo.length);
 }
