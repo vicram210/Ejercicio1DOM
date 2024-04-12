@@ -10,6 +10,7 @@ window.onload = function() {
     const enlaces = document.getElementsByTagName('a'); //Busca las etiquetas <a> de todo el codigo y dice la cantidad
     console.log("Número de enlaces de la página:", enlaces.length);
 
+    
     // Dirección a la que enlaza el penúltimo enlace
     if (enlaces.length >= 2) {
         const penultimoEnlace = enlaces[enlaces.length - 2]; //Le resta al contador -2
@@ -18,6 +19,7 @@ window.onload = function() {
     } else {
         console.log("No hay suficientes enlaces para obtener la dirección del penúltimo enlace.");
     }
+
 
     // Numero de enlaces que enlazan a http://prueba
     const enlaceBuscado = 'http://prueba/'; // URL del enlace que quieres buscar

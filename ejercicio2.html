@@ -11,9 +11,18 @@
 
 <script type="text/javascript">
 function muestra() {
-    document.getElementById("enlace").style.display = "none";
-    document.getElementById("adicional").style.display = "block";
+    // Obtener el elemento del texto adicional y del enlace
+    var textoAdicional = document.getElementById('adicional');
+    var enlace = document.getElementById('enlace');
+    
+    // Mostrar el texto adicional cambiando su clase CSS
+    textoAdicional.classList.remove('oculto');
+    textoAdicional.classList.add('visible');
+    
+    // Ocultar el enlace
+    enlace.style.display = 'none';
 }
+
 </script>
 </head>
 
